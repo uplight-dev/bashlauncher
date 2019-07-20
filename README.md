@@ -30,5 +30,3 @@ Also, it will update your PATH variable
 
 New commands can be defined by editing the init.sh file, specifically the **Aliases** function.
 
-xx
-
