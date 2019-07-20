@@ -1,1 +1,8 @@
 # bashlauncher
+
+## Usage
+git clone 
+
+```
+
+```
