@@ -25,8 +25,8 @@ Also, it will update your PATH variable
 | Command | Arguments | Description |
 |--|--|--|
 | x | `<command>` | Runs a command from your commands folder.<br> Pressing `<TAB>` after typing `x` will autocomplete with only the files in from your commands folder |
-| x0 | | changes folder to .bashlauncher |
-| 
+| x0 | - | changes folder to .bashlauncher |
+| c | - | clears the screen |
 
+New commands can be defined by editing the init.sh file, specifically the **Aliases** function.
 
-## Aliases
