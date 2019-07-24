@@ -35,7 +35,7 @@ aliases() {
 	alias c="clear"
 	alias x0="cd $SCRIPTS0_SYS"
 	alias lx="ls -al $SCRIPTS/"
-	alias blup="(cd $SCRIPTS0_SYS; CDIR=$PWD; echo Committing and Pushing all in <$CDIR>$\'\n\'; git add .; git commit -am 'updated scripts'; git push origin master; echo \n\nPush Complete!)"
+	alias blup="(cd $SCRIPTS0_SYS; echo Current DIR=$PWD; echo -e \"Committing and Pushing started\"; git add .; git commit -am 'updated scripts'; git push origin master; echo -e \"\n\nPush Complete!\")"
 }
 
 pathadd() {
