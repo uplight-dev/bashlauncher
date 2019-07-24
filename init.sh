@@ -1,13 +1,14 @@
 main() {
 HOME=$(cd ; pwd)
-SCRIPTS0_SYS=$HOME/.bashlauncher
+SCRIPTS0_SYS=$HOME/bashlauncher
 SCRIPTS0=$SCRIPTS0_SYS/_
 SCRIPTS=$HOME/bin
 
 #first, make symlink
 if [ ! -d "$SCRIPTS" ]; then
+	rm $SCRIPTS 2> /dev/null # remove symlink only
 	mkdir -p $SCRIPTS0
-	ln -sfv $SCRIPTS0/ $SCRIPTS
+	ln -sfv $SCRIPTS0 $SCRIPTS
 fi
 
 #=== includes
@@ -34,6 +35,7 @@ aliases() {
 	alias c="clear"
 	alias x0="cd $SCRIPTS0_SYS"
 	alias lx="ls -al $SCRIPTS/"
+	alias blup="(cd $SCRIPTS0_SYS; echo $PWD; git add .; git commit -am 'updated scripts'; git push origin master)"
 }
 
 pathadd() {
