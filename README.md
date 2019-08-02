@@ -10,7 +10,9 @@ BashLauncher is a simple script that allows:
 First, clone/fork this repo in your home folder:
 ```
 cd
-git clone https://github.com/dev4light/bashlauncher.git .bashlauncher
+git clone https://github.com/dev4light/bashlauncher.git bashlauncher
+cd bashlauncher
+git config --local include.path ../.gitconfig
 ```
 
 Next, run init.sh so that the script gets setup:
@@ -29,4 +31,3 @@ Also, it will update your PATH variable
 | c | - | clears the screen |
 
 New commands can be defined by editing the init.sh file, specifically the **Aliases** function.
-
