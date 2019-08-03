@@ -29,7 +29,7 @@ complete -o nospace -F _complete x
 #aliases
 aliases
 
-echo init finished
+echo [BashLauncher]:: init finished
 }
 
 aliases() {
