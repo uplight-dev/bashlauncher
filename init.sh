@@ -16,7 +16,8 @@ fi
 
 #update user's home
 USER_INITER=". $SCRIPTS0_SYS/init.sh"
-grep -qxF "$USER_INITER" ~/.profile || echo "$USER_INITER" >> ~/.profile
+#grep -qxF "$USER_INITER" ~/.profile || echo "$USER_INITER" >> ~/.profile
+grep -qxF "$USER_INITER" ~/.bashrc || echo "$USER_INITER" >> ~/.bashrc
 
 #add scripts dir to PATH
 pathadd $SCRIPTS
