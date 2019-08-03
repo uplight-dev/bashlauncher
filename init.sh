@@ -29,7 +29,7 @@ complete -o nospace -F _complete x
 #aliases
 aliases
 
-echo [BashLauncher]:: init finished
+echo [BashLauncher]:: loaded from $SCRIPTS0_SYS
 }
 
 aliases() {
