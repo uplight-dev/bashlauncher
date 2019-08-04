@@ -1,4 +1,5 @@
 main() {
+  
 HOME=$(cd ; pwd)
 export SCRIPTS0_SYS=$HOME/bashlauncher
 export SCRIPTS0=$SCRIPTS0_SYS/_
