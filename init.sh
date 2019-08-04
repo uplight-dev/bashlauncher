@@ -7,6 +7,7 @@ export SCRIPTS=$HOME/bin
 
 #first, make symlink
 if [ ! -d "$SCRIPTS" ]; then
+  echo Creating symlinks ...
 	rm $SCRIPTS 2> /dev/null # remove symlink only
 	mkdir -p $SCRIPTS0
 	ln -sfv $SCRIPTS0 $SCRIPTS
