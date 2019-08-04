@@ -1,8 +1,8 @@
 main() {
 HOME=$(cd ; pwd)
-SCRIPTS0_SYS=$HOME/bashlauncher
-SCRIPTS0=$SCRIPTS0_SYS/_
-SCRIPTS=$HOME/bin
+export SCRIPTS0_SYS=$HOME/bashlauncher
+export SCRIPTS0=$SCRIPTS0_SYS/_
+export SCRIPTS=$HOME/bin
 
 #first, make symlink
 if [ ! -d "$SCRIPTS" ]; then
