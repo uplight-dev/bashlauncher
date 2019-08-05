@@ -28,11 +28,16 @@ complete -o nospace -F _complete x
 #aliases
 aliases
 
-echo init finished
+#startup scripts
+for script in $SCRIPTS/_startup_*; do
+  echo EXEC: $script
+  . $script
+done 
+
+echo [BashLauncher]:: loaded from $SCRIPTS0_SYS
 }
 
 aliases() {
-	alias c="clear"
 	alias x0="cd $SCRIPTS0_SYS"
 	alias lx="ls -al $SCRIPTS/"
 	alias blup="(cd $SCRIPTS0_SYS; echo Current DIR=$PWD; echo Pulling changes ...; git pull; echo -e \"Committing and Pushing started\"; git add .; git commit -am 'updated scripts'; git push origin master; echo -e \"\n\nPush Complete!\")"
