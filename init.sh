@@ -1,11 +1,22 @@
 main() {
+  
 HOME=$(cd ; pwd)
+<<<<<<< HEAD
 SCRIPTS0_SYS=$HOME/bashlauncher
 SCRIPTS0=$SCRIPTS0_SYS/_
 SCRIPTS=$HOME/bin
 
 #first, make symlink
 if [ ! -d "$SCRIPTS" ]; then
+=======
+export SCRIPTS0_SYS=$HOME/bashlauncher
+export SCRIPTS0=$SCRIPTS0_SYS/_
+export SCRIPTS=$HOME/bin
+
+#first, make symlink
+if [ ! -d "$SCRIPTS" ]; then
+  echo Creating symlinks ...
+>>>>>>> fe5f5a067391bd94ff5c67e4f44ced02b2cb4aa6
 	rm $SCRIPTS 2> /dev/null # remove symlink only
 	mkdir -p $SCRIPTS0
 	ln -sfv $SCRIPTS0 $SCRIPTS
@@ -16,7 +27,8 @@ fi
 
 #update user's home
 USER_INITER=". $SCRIPTS0_SYS/init.sh"
-grep -qxF "$USER_INITER" ~/.profile || echo "$USER_INITER" >> ~/.profile
+#grep -qxF "$USER_INITER" ~/.profile || echo "$USER_INITER" >> ~/.profile
+grep -qxF "$USER_INITER" ~/.bashrc || echo "$USER_INITER" >> ~/.bashrc
 
 #add scripts dir to PATH
 pathadd $SCRIPTS
@@ -28,18 +40,25 @@ complete -o nospace -F _complete x
 #aliases
 aliases
 
+<<<<<<< HEAD
 #startup scripts
 for script in $SCRIPTS/_startup_*; do
   echo EXEC: $script
   . $script
 done 
 
+=======
+>>>>>>> fe5f5a067391bd94ff5c67e4f44ced02b2cb4aa6
 echo [BashLauncher]:: loaded from $SCRIPTS0_SYS
 }
 
 aliases() {
 	alias x0="cd $SCRIPTS0_SYS"
 	alias lx="ls -al $SCRIPTS/"
+<<<<<<< HEAD
+=======
+	#Bash launcher - update
+>>>>>>> fe5f5a067391bd94ff5c67e4f44ced02b2cb4aa6
 	alias blup="(cd $SCRIPTS0_SYS; echo Current DIR=$PWD; echo Pulling changes ...; git pull; echo -e \"Committing and Pushing started\"; git add .; git commit -am 'updated scripts'; git push origin master; echo -e \"\n\nPush Complete!\")"
 }
 

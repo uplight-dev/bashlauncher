@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@bitbucket.org:dev4light/bashlauncher.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "develop"]
+	remote = origin
+	merge = refs/heads/develop
+[remote "origin0"]
+	url = https://github.com/dev4light/bashlauncher
+	fetch = +refs/heads/*:refs/remotes/origin0/*
+[branch "master"]
+	remote = origin0
+	merge = refs/heads/master
