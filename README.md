@@ -6,7 +6,7 @@ BashLauncher is a simple script that allows:
 1. Keeping all your bash scripts organized in one folder
 1. Easy access and autocompletion for running any command in that folder (using the "x" command)
 
-## Usage
+## Installation
 First, clone/fork this repo in your home folder:
 ```
 cd
@@ -22,6 +22,18 @@ Next, run init.sh so that the script gets setup:
 ```
 This will automatically update your .profile so that each time you login, BashLauncher is started up.
 Also, it will update your PATH variable 
+
+In MACOS:
+
+1. On Mac, you have to install bash-completion with brew i.e. brew install bash-completion then as per the install notes, add it to your ~/.bash_profile:
+
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+  fi
+
+2. add in ~/.bash_profile
+
+source ~/.bashrc
 
 ## Commands
 | Command | Arguments | Description |
